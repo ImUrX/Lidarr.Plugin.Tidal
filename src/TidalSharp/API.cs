@@ -91,7 +91,9 @@ public class API
         headers ??= [];
         urlParameters ??= [];
         urlParameters["sessionId"] = _activeUser?.SessionID ?? "";
-        urlParameters["countryCode"] = _activeUser?.CountryCode ?? "";
+        var country = _activeUser?.CountryCode ?? "";
+        if (string.IsNullOrEmpty(country)) country = "US";
+        urlParameters["countryCode"] = country;
         urlParameters["limit"] = _session.ItemLimit.ToString();
 
         if (_activeUser != null)
