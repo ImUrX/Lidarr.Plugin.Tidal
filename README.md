@@ -1,6 +1,8 @@
 # Tidal for Lidarr
 This plugin provides a Tidal indexer and downloader client for Lidarr.
 
+ignore me
+
 ## Installation
 This requires your Lidarr setup to be using the `plugins` branch. My docker-compose is setup like the following.
 ```yml
